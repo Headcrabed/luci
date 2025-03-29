@@ -158,6 +158,9 @@ return view.extend({
 			_('Report maximum upload speed in kByte/s'));
 		o.depends('enable_upnp', '1');
 
+		s.taboption('advanced', form.Flag, 'force_forwarding', _('Force forwarding'),
+			_('Force forwarding ports even if the network is behind non-full-cone(or cannot get detected as full-cone) NAT'));
+
 		s.taboption('advanced', form.Flag, 'use_stun', _('Use %s', 'Use %s (%s = STUN)')
 				.format('<a href="https://en.wikipedia.org/wiki/STUN" target="_blank" rel="noreferrer"><abbr title="Session Traversal Utilities for NAT">STUN</abbr></a>'),
 			_('To detect the public IPv4 address for unrestricted full-cone/one-to-one NATs'));
